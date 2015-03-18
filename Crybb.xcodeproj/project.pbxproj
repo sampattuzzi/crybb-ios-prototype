@@ -18,6 +18,7 @@
 		45E436D71A2B91EB004DE906 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E436D01A2B91EB004DE906 /* Person.m */; };
 		45E436D81A2B91EB004DE906 /* ChoosePersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E436D31A2B91EB004DE906 /* ChoosePersonView.m */; };
 		45E436D91A2B91EB004DE906 /* ImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E436D51A2B91EB004DE906 /* ImageLabelView.m */; };
+		45F863DF1A38686E001BB282 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F863DE1A38686E001BB282 /* MessagesViewController.m */; };
 		DE1A534F7B4FF28C78B1F8F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3ACC742CE9DAA70A3042CC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		45E436D31A2B91EB004DE906 /* ChoosePersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePersonView.m; sourceTree = "<group>"; };
 		45E436D41A2B91EB004DE906 /* ImageLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelView.h; sourceTree = "<group>"; };
 		45E436D51A2B91EB004DE906 /* ImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelView.m; sourceTree = "<group>"; };
+		45F863DD1A38686E001BB282 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		45F863DE1A38686E001BB282 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
 		C82FF94E7412ED97BD22F2D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DF3ACC742CE9DAA70A3042CC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89F119DA4BD279E4742320 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			children = (
 				45E436CC1A2B91EB004DE906 /* ChoosePersonViewController.h */,
 				45E436CD1A2B91EB004DE906 /* ChoosePersonViewController.m */,
+				45F863DD1A38686E001BB282 /* MessagesViewController.h */,
+				45F863DE1A38686E001BB282 /* MessagesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,9 +245,11 @@
 				TargetAttributes = {
 					45E436A11A2B910C004DE906 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = Y5Y387R22B;
 					};
 					45E436BA1A2B910C004DE906 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = Y5Y387R22B;
 						TestTargetID = 45E436A11A2B910C004DE906;
 					};
 				};
@@ -326,6 +333,7 @@
 			files = (
 				45E436AE1A2B910C004DE906 /* ViewController.m in Sources */,
 				45E436AB1A2B910C004DE906 /* AppDelegate.m in Sources */,
+				45F863DF1A38686E001BB282 /* MessagesViewController.m in Sources */,
 				45E436D81A2B91EB004DE906 /* ChoosePersonView.m in Sources */,
 				45E436D71A2B91EB004DE906 /* Person.m in Sources */,
 				45E436D61A2B91EB004DE906 /* ChoosePersonViewController.m in Sources */,
@@ -484,6 +492,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -495,6 +505,7 @@
 				INFOPLIST_FILE = CrybbTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crybb.app/Crybb";
 			};
 			name = Debug;
@@ -503,6 +514,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -510,6 +523,7 @@
 				INFOPLIST_FILE = CrybbTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crybb.app/Crybb";
 			};
 			name = Release;
